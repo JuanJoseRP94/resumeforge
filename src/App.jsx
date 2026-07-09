@@ -1,11 +1,14 @@
 import { useState } from "react";
 import { initialResume } from "./data/initialResume";
+import { themes } from "./data/themes";
 import PersonalInfoForm from "./components/PersonalInfoForm";
 import SectionsEditor from "./components/SectionsEditor";
 import ResumePreview from "./components/ResumePreview";
+import ThemeSwitcher from "./components/ThemeSwitcher";
 
 function App() {
   const [resume, setResume] = useState(initialResume);
+  const [theme, setTheme] = useState(themes[0]);
 
   const updatePersonalInfo = (personalInfo) => {
     setResume((prev) => ({ ...prev, personalInfo }));
@@ -35,6 +38,7 @@ function App() {
 
       <main className="grid grid-cols-1 lg:grid-cols-2 gap-6 p-6 max-w-7xl mx-auto">
         <div className="space-y-4">
+          <ThemeSwitcher selectedTheme={theme} onSelect={setTheme} />
           <PersonalInfoForm
             personalInfo={resume.personalInfo}
             onChange={updatePersonalInfo}
@@ -47,7 +51,7 @@ function App() {
         </div>
 
         <div className="lg:sticky lg:top-6 lg:self-start">
-          <ResumePreview resume={resume} />
+          <ResumePreview resume={resume} theme={theme} />
         </div>
       </main>
     </div>
