@@ -1,12 +1,12 @@
 export const initialResume = {
   personalInfo: {
-    name: "Juan José Romero",
-    title: "Desarrollador Junior · Java · Python · React",
-    email: "tu-email@ejemplo.com",
+    name: "Tu nombre completo",
+    title: "Tu título profesional ( Desarrollador web, Diseñador gráfico, etc. )",
+    email: "email@ejemplo.com",
     phone: "+34 600 000 000",
-    location: "España",
+    location: "Ciudad, País",
     summary:
-      "Desarrollador junior con formación sólida en Java, Python y React. Experiencia práctica construyendo proyectos completos: APIs REST con autenticación, dashboards de análisis de datos con IA generativa, y aplicaciones web interactivas.",
+      "Breve resumen profesional. Describe tus habilidades, experiencia y objetivos de carrera en unas pocas líneas.",
   },
   sections: [
     {
@@ -20,7 +20,7 @@ export const initialResume = {
           company: "JobTrackr API",
           period: "2026",
           description:
-            "API REST con Spring Boot, autenticación JWT, arquitectura en capas y tests unitarios.",
+            "Descripción de la experiencia laboral o proyecto personal. Puedes detallar tus responsabilidades, logros y tecnologías utilizadas.",
         },
       ],
     },
@@ -42,12 +42,12 @@ export const initialResume = {
       type: "skills",
       title: "Habilidades",
       items: [
-        { id: "skill-1", name: "Java" },
-        { id: "skill-2", name: "Python" },
-        { id: "skill-3", name: "React" },
-        { id: "skill-4", name: "Spring Boot" },
-        { id: "skill-5", name: "Análisis de datos" },
-        { id: "skill-6", name: "IA generativa" },
+        { id: "skill-1", name: "Habilidad 1" },
+        { id: "skill-2", name: "Habilidad 2" },
+        { id: "skill-3", name: "Habilidad 3" },
+        { id: "skill-4", name: "Habilidad 4" },
+        { id: "skill-5", name: "Habilidad 5" },
+        { id: "skill-6", name: "Habilidad 6" },
       ],
     },
   ],
