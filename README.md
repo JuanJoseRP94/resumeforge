@@ -1,16 +1,43 @@
-# React + Vite
+# 📄 ResumeForge
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Editor de currículums interactivo en tiempo real: escribe a la izquierda, ve el resultado renderizado al instante a la derecha. Reordena secciones con drag & drop, cambia de tema visual con una animación fluida, y descarga el resultado en PDF.
 
-Currently, two official plugins are available:
+🔗 **[Ver demo en vivo](https://resumeforge26-46g4uaj8a-resume-forge1.vercel.app/)**
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## ✨ Qué incluye
 
-## React Compiler
+- **Edición en tiempo real**: cualquier cambio en el formulario se refleja al instante en la vista previa, sin recargar nada.
+- **Reordenar secciones con drag & drop** (experiencia, educación, habilidades) — arrastra y suelta para cambiar el orden de tu CV.
+- **4 temas visuales** intercambiables con transición animada (color de acento y tipografía).
+- **Animaciones fluidas** con Framer Motion en la aparición/desaparición de habilidades y el reordenamiento de secciones.
+- **Exportación a PDF** lista para enviar a una empresa.
+- **Persistencia automática**: tu progreso se guarda solo en el navegador (localStorage), no se pierde al recargar.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 🛠️ Stack técnico
 
-## Expanding the ESLint configuration
+- **React 19** + **Vite**
+- **Tailwind CSS 4** para el diseño
+- **Framer Motion** para las animaciones
+- **@dnd-kit** para el drag & drop (accesible, ligero, mantenido activamente — sucesor de `react-beautiful-dnd`)
+- **react-to-print** para la exportación a PDF
+- Desplegado gratis en **Vercel**
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🚀 Ejecutar en local
+
+```bash
+git clone https://github.com/JuanJoseRP94/resumeforge.git
+cd resumeforge
+npm install
+npm run dev
+```
+
+Abre `http://localhost:5173`.
+
+## 💡 Decisiones de diseño
+
+- El currículum se modela como una **lista de secciones**, no como campos fijos — esto hace que el drag & drop sea trivial (reordenar secciones es simplemente reordenar un array) y permite añadir nuevos tipos de sección en el futuro sin rediseñar el estado.
+- El estado vive centralizado en `App.jsx` y desciende por props — patrón estándar de React para mantener una única fuente de verdad.
+
+## 📝 Licencia
+
+MIT
